@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Advanced Fitness Tracker</h1>
+
+        <form id="fitnessForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="exercise">Exercise:</label>
+            <input type="text" id="exercise" placeholder="Running" required>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" placeholder="30" required>
+
+            <label for="calories">Calories Burned:</label>
+            <input type="number" id="calories" placeholder="200" required>
+
+            <button type="submit">Add Entry</button>
+        </form>
+
+        <h2>Fitness Log</h2>
+        <table id="fitnessTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Exercise</th>
+                    <th>Duration (min)</th>
+                    <th>Calories Burned</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Charts</h2>
+        <div class="chart-controls">
+            <label for="chartType">Select Chart:</label>
+            <select id="chartType">
+                <option value="line">Calories Over Time</option>
+                <option value="bar">Duration Over Time</option>
+                <option value="pie">Exercise Type Distribution</option>
+            </select>
+        </div>
+        <canvas id="fitnessChart"></canvas>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
